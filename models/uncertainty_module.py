@@ -51,10 +51,7 @@ def inference(inputs, embedding_size, phase_train,
 
                 net = slim.flatten(inputs)
 
-                if embedding_size < 256:
-                    fc1_size = 256
-                else:
-                    fc1_size = embedding_size
+                fc1_size = 256
                 net = slim.fully_connected(net, fc1_size, scope='fc1',
                     normalizer_fn=slim.batch_norm, normalizer_params=batch_norm_params, 
                     activation_fn=tf.nn.relu)

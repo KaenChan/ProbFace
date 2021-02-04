@@ -7,7 +7,9 @@ import time
 from evaluation.openset_lfw.openset_roc import OpenSetROC
 from utils.utils import pair_cosin_score, nvm_MLS_score, nvm_MLS_score_attention
 
-root_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\proto/'
+CUR_DIR = os.path.dirname(os.path.abspath(__file__))
+# root_dir = r'G:\chenkai\ProbFace\proto/'
+root_dir = os.path.join(CUR_DIR, '..', '..', 'proto')
 # configFile = root_dir + 'data/blufr/blufr_lfw_config.mat'  # configuration file for this evaluation
 # data = sio.loadmat(configFile)
 
@@ -24,29 +26,6 @@ reportRank = 1  # the rank point for open-set identification performance reporti
 
 def openset_lfw(feats, compare_func, numTrials=None):
     start_time = time.time()
-    ## Load your own features here. The features should be extracted according
-    # to the order of the imageList in the configFile. It is 13233xd for the
-    # LFW database where d is the feature dimensionality.
-    # feaFile = 'evaluation/face_identification_eval/data/cnn_feats_lfw_lightenCNN.mat'
-    # feaFile = 'evaluation/face_identification_eval/data/cnn_feats_lfw.mat'
-    # feaFile = 'cnn_feats_lfw(99.13).mat'      # faceid
-    # feaFile = 'cnn_feats_lfw(98.70-flip)20000.mat'      # faceid
-    # feaFile = 'cnn_feats_lfw.mat'      # faceid
-    # feaFile = 'cnn_feats_lfw(99.33).mat'      # faceid
-    # # feaFile = 'cnn_feats_lfw(98.37-flip).mat'      # faceid
-    # # feaFile = 'cnn_feats_lfw(98.73-flip)90000.mat'      # faceid
-    # feaFile = 'cnn_feats_lfw(99.40-256b).mat'      # faceid
-    # feaFile = 'cnn_feats_lfw.mat'      # faceid
-    # load(feaFile)
-    # feats = feats(:,1:128)
-
-    # fprintf([feaFile '\n'])
-
-    # feaFile = 'data/LightenedCNN_B_lfw.mat'
-    # load(feaFile)
-    # feats = features
-    # load('data/index_lightcnn_2_wdref.mat')
-    # feats = feats(index_lightcnn_2_wdref,:)
 
     data = sio.loadmat(root_dir + 'blufr/id_lfw.mat')
     id_lfw = data['id_lfw']
@@ -272,7 +251,6 @@ if __name__ == '__main__':
     # feats = features
     # load('data/index_lightcnn_2_wdref.mat')
     # feats = feats(index_lightcnn_2_wdref,:)
-
     feaFile = r'F:\docker-images\faceid_deploy\evaluate\evaluate_lfw\feats_lfw.npy'
     if feaFile.endswith('.mat'):
         data = sio.loadmat(feaFile)

@@ -353,26 +353,6 @@ def eval_images(images_preprocessed, issame_list, network, batch_size, nfolds=10
     return eval_images_with_sigma(mu, sigma_sq, issame_list, nfolds=10, name='', filter_out_type=filter_out_type)
 
 
-def eval_images_from_pkl():
-    filter_out_type = 'max'
-
-    save_name_pkl_feature = r'F:\data\face-recognition\test\IJB_release\pretrained_models\MS1MV2-ResNet100-Arcface\cfp_fp_feature.pkl'
-    save_name_pkl_feature = r'F:\data\face-recognition\test\IJB_release\pretrained_models\VGG2-ResNet50-Arcface\cfp_fp_feature.pkl'
-    with open(save_name_pkl_feature, 'rb') as f:
-        data = cPickle.load(f)
-    mu, sigma_sq, issame_list = data
-    print('load', save_name_pkl_feature)
-
-    save_name_pkl_feature = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64_relu_msarcface_am_PFE_mbv3\20201112-201201-run01\cfp_fp_feature.pkl'
-    save_name_pkl_feature = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64m_relu_msarcface_am_PFE\20201028-193142-mls1.0-abs0.001-triplet0.0001\cfp_fp_feature.pkl'
-    with open(save_name_pkl_feature, 'rb') as f:
-        data = cPickle.load(f)
-    mu2, sigma_sq, issame_list = data
-    print('load', save_name_pkl_feature)
-    s = eval_images_with_sigma(mu, sigma_sq, issame_list, nfolds=10, name='', filter_out_type=filter_out_type)
-    print(s)
-
-
 def save_dataset_as_jpg(data_set, name):
     data_list = data_set[0]
     issame_list = data_set[1]
@@ -405,22 +385,10 @@ def eval(data_set, network, batch_size, nfolds=10, name='', result_dir='', re_ex
   return ret
 
 
-def main_save_data(args):
-    data_dir = args.dataset_path
-    data_dir = r'F:\data\face-recognition\MS-Celeb-1M\faces_emore'
-    data_dir = r'F:\data\face-recognition\trillion-pairs\challenge\ms1m-retinaface-t1'
-    for name in args.target.split(','):
-        path = os.path.join(data_dir,name+".bin")
-        if os.path.exists(path):
-            image_size = [112, 112]
-            data_set = load_bin(path, image_size)
-            save_dataset_as_jpg(data_set, name)
-
-
 def main(args):
     data_dir = args.dataset_path
-    data_dir = r'F:\data\face-recognition\MS-Celeb-1M\faces_emore'
-    data_dir = r'F:\data\face-recognition\trillion-pairs\challenge\ms1m-retinaface-t1'
+    # data_dir = r'F:\data\face-recognition\MS-Celeb-1M\faces_emore'
+    # data_dir = r'F:\data\face-recognition\trillion-pairs\challenge\ms1m-retinaface-t1'
 
     re_extract_feature = True
     # filter_out_type = 'add'
@@ -459,38 +427,14 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_dir", help="The path to the pre-trained model directory",
                         type=str,
-                        default=r'D:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64_relu_msarcface_am_PFE\20191208-232851-99.817')
+                        default=r'')
     parser.add_argument("--dataset_path", help="The path to the LFW dataset directory",
                         type=str, default=r'F:\data\face-recognition\trillion-pairs\challenge\ms1m-retinaface-t1')
     parser.add_argument("--batch_size", help="Number of images per mini batch",
                         type=int, default=16)
     parser.add_argument('--target', type=str, default='lfw,cfp_fp,agedb_30', help='verification targets')
     args = parser.parse_args()
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64m_relu_msarcface_am_PFE\20201028-193142-mls1.0-abs0.001-triplet0.0001'
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64_relu_msarcface_am_PFE\20201028-025034-mls1.0-abs0.001-triplet0.0001'
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64_relu_msarcface_am_PFE\20201020-180059-mls-only'
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64s2\20201030-125503-ms'
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64m_relu_msarcface_am_PFE\20201114-181703-dropout'
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64_128x128_dropout\20201114-171043-iter0'
-    args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface100\20201101-144109-mls1.0-abs0.001'
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64_relu_msarcface_am_PFE_mbv3\20201113-000349-run02-iter64-99.03'
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64_relu_msarcface_am_PFE_mbv3\20201113-151004-multiscale-abs1e-3-triplet1e-3'
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64s2\20201029-211939-mls1.0-abs0.001-triplet0.001'
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64_128x128_dropout\20201114-171043-iter0'
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64s2\20201029-183528-mls-only'
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64m_relu_msarcface_am_PFE\20201028-134735-mls-only'
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64_relu_msarcface_am_PFE\20201027-225257-mls1.0-abs0.001-triplet0.1'
-    # args.model_dir = r'G:\data\model_mgpu\resface64_relu_96\20200818-171637-arc-cl0.6-0.01-regu10-aug0.01'
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64_relu_msarcface_am_PFE_res12s4\20201112-172351-run02'
-    # args.model_dir = r'G:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64_relu_msarcface_am_PFE_res12\20201031-004018-mls1.0-abs0.001-iter64'
+    # args.model_dir = r'log/resface64/20201028-193142-multiscale'
+    # args.target = 'lfw,calfw,cplfw,cfp_ff,cfp_fp,agedb_30,vgg2_fp'
     # args.target = 'cfp_fp'
-    # args.target = 'agedb_30'
-    # args.target = 'cfp_fp,agedb_30'
-    # args.target = 'calfw,cplfw,cfp_ff,vgg2_fp'
-    # args.target = 'agedb_30'
-    # args.target = 'lfw,cfp_fp,agedb_30'
-    args.target = 'lfw,calfw,cplfw,cfp_ff,cfp_fp,agedb_30,vgg2_fp'
-    args.target = 'cfp_fp'
-    # main(args)
-    # main_save_data(args)
-    eval_images_from_pkl()
+    main(args)

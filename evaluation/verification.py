@@ -166,8 +166,8 @@ def eval(data_set, network, batch_size, nfolds=10, name=''):
 
 def main(args):
     data_dir = args.dataset_path
-    data_dir = r'F:\data\face-recognition\MS-Celeb-1M\faces_emore'
-    data_dir = r'F:\data\face-recognition\trillion-pairs\challenge\ms1m-retinaface-t1'
+    # data_dir = r'F:\data\face-recognition\MS-Celeb-1M\faces_emore'
+    # data_dir = r'F:\data\face-recognition\trillion-pairs\challenge\ms1m-retinaface-t1'
 
     # Load model files and config file
     network = Network()
@@ -193,7 +193,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_dir", help="The path to the pre-trained model directory",
                         type=str,
-                        default=r'D:\chenkai\Probabilistic-Face-Embeddings-master\log\resface64_relu_msarcface_am_PFE\20191208-232851-99.817')
+                        default=r'')
     parser.add_argument("--dataset_path", help="The path to the LFW dataset directory",
                         type=str, default=r'F:\data\face-recognition\trillion-pairs\challenge\ms1m-retinaface-t1')
     parser.add_argument("--batch_size", help="Number of images per mini batch",

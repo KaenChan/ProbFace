@@ -76,15 +76,12 @@ def main(args):
     info1 = openset_lfw(mu, utils.pair_cosin_score, numTrials)
     print(info1)
 
-    # for q in [0, 0.02, 0.05, 0.1, 0.15, 0.2]:
-    for q in [0]:
-        print('========> q', q)
-        compare_func = lambda x,y: utils.nvm_MLS_score(x, y, q=q)
-        info2 = openset_lfw(feat_pfe, compare_func, numTrials)
-        print(info2)
-        compare_func = lambda x,y: utils.nvm_MLS_score_attention(x, y, q=q)
-        info3 = openset_lfw(feat_pfe, compare_func, numTrials)
-        print(info3)
+    compare_func = lambda x,y: utils.nvm_MLS_score(x, y)
+    info2 = openset_lfw(feat_pfe, compare_func, numTrials)
+    print(info2)
+    compare_func = lambda x,y: utils.nvm_MLS_score_attention(x, y)
+    info3 = openset_lfw(feat_pfe, compare_func, numTrials)
+    print(info3)
     print('-----------')
     print(info1)
     print(info2)
