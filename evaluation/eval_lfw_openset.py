@@ -79,17 +79,17 @@ def main(args):
     compare_func = lambda x,y: utils.nvm_MLS_score(x, y)
     info2 = openset_lfw(feat_pfe, compare_func, numTrials)
     print(info2)
-    compare_func = lambda x,y: utils.nvm_MLS_score_attention(x, y)
-    info3 = openset_lfw(feat_pfe, compare_func, numTrials)
-    print(info3)
+    # compare_func = lambda x,y: utils.nvm_MLS_score_attention(x, y)
+    # info3 = openset_lfw(feat_pfe, compare_func, numTrials)
+    # print(info3)
     print('-----------')
     print(info1)
     print(info2)
-    print(info3)
+    # print(info3)
     with open(os.path.join(args.model_dir, 'testing-log.txt'), 'a') as f:
         f.write(info1 + '\n')
         f.write(info2 + '\n')
-        f.write(info3 + '\n')
+        # f.write(info3 + '\n')
 
 
 if __name__ == '__main__':

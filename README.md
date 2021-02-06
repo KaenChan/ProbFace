@@ -56,7 +56,7 @@ Download the MS-Celeb-1M dataset from [insightface](https://github.com/deepinsig
     sigma_sq [0.19821654 0.25770819 0.29024169 0.35030219 0.40342696 0.44539295
      0.56343746] percentile [0, 10, 30, 50, 70, 90, 100]
     risk_factor 0.0 risk_threshold 0.5634374618530273 keep_idxes 7000 / 7000 Cosine score acc 0.980429 threshold 0.182809
-    risk_factor 0.1 risk_threshold 0.46279847621917725 keep_idxes 6301 / 7000 Cosine score acc 0.983336 threshold 0.201020
+    risk_factor 0.1 risk_threshold 0.4627984762191772 keep_idxes 6301 / 7000 Cosine score acc 0.983336 threshold 0.201020
     risk_factor 0.2 risk_threshold 0.4453900158405304 keep_idxes 5603 / 7000 Cosine score acc 0.985007 threshold 0.203516
     risk_factor 0.3 risk_threshold 0.4327596127986908 keep_idxes 4904 / 7000 Cosine score acc 0.986134 threshold 0.207834
     ```
@@ -70,7 +70,7 @@ Download the MS-Celeb-1M dataset from [insightface](https://github.com/deepinsig
 
 ### Visualization of Uncertainty
 
-<img src="https://github.com/KaenChan/ProbFace/blob/main/log/ms1m-examples-choice-probface.jpg" width="600px">
+<img src="https://github.com/KaenChan/ProbFace/blob/main/log/ms1m-examples-choice-probface.jpg" width="800px">
 
 
 ## <img src="https://image.flaticon.com/icons/svg/48/48541.svg" width="25"/> Pre-trained Model

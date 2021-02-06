@@ -1,4 +1,4 @@
-SET PYTHONPATH=G:\chenkai\probface-github
+SET PYTHONPATH=%cd%
 
 SET MODEL_DIR=log/resface64/20201028-193142-multiscale
 call :fun_eval_all
@@ -17,10 +17,12 @@ exit /b 0
         --target %TARGET% ^
         --model_dir %MODEL_DIR%
 
+    d:\Anaconda3\python.exe evaluation\verification_risk.py ^
+        --target %TARGET% ^
+        --model_dir %MODEL_DIR%
+
     d:\Anaconda3\python.exe evaluation\eval_lfw_openset.py ^
         --model_dir %MODEL_DIR% ^
         --dataset_path F:\data\face-recognition\lfw\lfw-112-mxnet
-
-    move *.npy %MODEL_DIR%
 
 GOTO:EOF

@@ -9,7 +9,9 @@ from utils.utils import pair_cosin_score, nvm_MLS_score, nvm_MLS_score_attention
 
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
 # root_dir = r'G:\chenkai\ProbFace\proto/'
-root_dir = os.path.join(CUR_DIR, '..', '..', 'proto')
+# root_dir = os.path.join(CUR_DIR, '..', '..', 'proto')
+project_root = os.path.dirname(os.path.dirname(CUR_DIR))
+proto_root_dir = project_root + '/proto/'
 # configFile = root_dir + 'data/blufr/blufr_lfw_config.mat'  # configuration file for this evaluation
 # data = sio.loadmat(configFile)
 
@@ -27,10 +29,10 @@ reportRank = 1  # the rank point for open-set identification performance reporti
 def openset_lfw(feats, compare_func, numTrials=None):
     start_time = time.time()
 
-    data = sio.loadmat(root_dir + 'blufr/id_lfw.mat')
+    data = sio.loadmat(proto_root_dir + 'blufr/id_lfw.mat')
     id_lfw = data['id_lfw']
 
-    data = sio.loadmat(root_dir + 'blufr/lfw_gallery_index.mat')
+    data = sio.loadmat(proto_root_dir + 'blufr/lfw_gallery_index.mat')
     gallery_index = np.array([
         data['gallery_index_1'].ravel(),
         data['gallery_index_2'].ravel(),
@@ -45,7 +47,7 @@ def openset_lfw(feats, compare_func, numTrials=None):
         ])
     gallery_index -= 1
 
-    data = sio.loadmat(root_dir + 'blufr/lfw_genuine_probe_index.mat')
+    data = sio.loadmat(proto_root_dir + 'blufr/lfw_genuine_probe_index.mat')
     genuine_probe_index = np.array([
         data['genuine_probe_index_1'].ravel(),
         data['genuine_probe_index_2'].ravel(),
@@ -60,7 +62,7 @@ def openset_lfw(feats, compare_func, numTrials=None):
         ])
     genuine_probe_index -= 1
 
-    data = sio.loadmat(root_dir + 'blufr/lfw_impostor_probe_index.mat')
+    data = sio.loadmat(proto_root_dir + 'blufr/lfw_impostor_probe_index.mat')
     impostor_probe_index = np.array([
         data['impostor_probe_index_1'].ravel(),
         data['impostor_probe_index_2'].ravel(),
@@ -149,7 +151,7 @@ def openset_lfw(feats, compare_func, numTrials=None):
                 # import sys
                 # sys.stdout.write('{} {} {} {} \t\r'.format(t, np.array(score_array).shape, X1.shape, X2.shape))
             # print('')
-        print('--> ', compare_func, 'n', len(X1)*len(X2), 'time', time.time()-t1)
+        # print('--> ', compare_func, 'n', len(X1)*len(X2), 'time', time.time()-t1)
 
         score = np.array(score_array)
         # print(score.shape)
@@ -229,9 +231,9 @@ def get_paths(lfw_dir, lfw_pairs_file, file_ext):
     return path_list, issame_list
 
 def get_paths_all(lfw_dir):
-    pairs = os.path.join(root_dir, 'lfw_pairs.txt')
+    pairs = os.path.join(proto_root_dir, 'lfw_pairs.txt')
     file_ext = 'jpg'
-    path_WDRef = os.path.join(root_dir, 'WDRef')
+    path_WDRef = os.path.join(proto_root_dir, 'WDRef')
     data = sio.loadmat(path_WDRef + '/imagelist_lfw')
     imagelist_lfw = data['imagelist_lfw'].ravel()
     path_list = []

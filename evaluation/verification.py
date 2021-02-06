@@ -139,17 +139,13 @@ def eval_images(images_preprocessed, issame_list, network, batch_size, nfolds=10
     s += 'Cosine score acc %f threshold %f\n' % (accuracy, threshold)
     # print('cosin', 'acc', accuracy, 'threshold', threshold)
     print(s)
-    # for q in [0, 0.02, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6]:
-    for q in [0]:
-        compare_func = lambda x,y: utils.pair_MLS_score(x, y, q=q, use_attention_only=False)
-        accuracy, threshold = evaluate(feat_pfe, issame_list, compare_func, nrof_folds=nfolds)
-        # s += '\n========> q' + str(q) +' '
-        s += 'MLS score acc %f threshold %f' % (accuracy, threshold)
-        # print('MLS', 'acc', accuracy, 'threshold', threshold)
-        compare_func = lambda x,y: utils.pair_MLS_score(x, y, q=q, use_attention_only=True)
-        accuracy, threshold = evaluate(feat_pfe, issame_list, compare_func, nrof_folds=nfolds)
-        # s += '\n========> q' + str(q) +' '
-        s += '\nAttention-only score acc %f threshold %f' % (accuracy, threshold)
+    compare_func = lambda x,y: utils.pair_MLS_score(x, y, use_attention_only=False)
+    accuracy, threshold = evaluate(feat_pfe, issame_list, compare_func, nrof_folds=nfolds)
+    s += 'MLS score acc %f threshold %f' % (accuracy, threshold)
+    # print('MLS', 'acc', accuracy, 'threshold', threshold)
+    compare_func = lambda x,y: utils.pair_MLS_score(x, y, use_attention_only=True)
+    accuracy, threshold = evaluate(feat_pfe, issame_list, compare_func, nrof_folds=nfolds)
+    s += '\nAttention-only score acc %f threshold %f' % (accuracy, threshold)
     print(s)
     return s
 
