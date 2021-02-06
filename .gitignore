@@ -6,6 +6,7 @@ backup/
 
 # C extensions
 *.so
+/.idea/
 
 # Distribution / packaging
 .Python

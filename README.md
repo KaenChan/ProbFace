@@ -13,7 +13,7 @@ The representation of each face will be an Guassian distribution parametrized by
 
 ### Preprocessing
 
-Download the MS-Celeb-1M dataset from [insightface](https://github.com/deepinsight/insightface/wiki/Dataset-Zoo) or [baidu]() and decode it using [this code](https://github.com/deepinsight/insightface/blob/master/recognition/data/rec2image.py)
+Download the MS-Celeb-1M dataset from [insightface](https://github.com/deepinsight/insightface/wiki/Dataset-Zoo) or [face.evoLVe.PyTorch](https://github.com/ZhaoJ9014/face.evoLVe.PyTorch#Data-Zoo) and decode it using [this code](https://github.com/deepinsight/insightface/blob/master/recognition/data/rec2image.py)
 
 ### Training
 1. Download the base model [ResFace64](https://drive.baidu.com/open?id=1MiC_qCj5GFidWLtON9ekClOCJu6dPHT4) and unzip the files under ```log/resface64```.
@@ -70,31 +70,34 @@ Download the MS-Celeb-1M dataset from [insightface](https://github.com/deepinsig
 
 ### Visualization of Uncertainty
 
-<img src="https://github.com/KaenChan/ProbFace/blob/master/log/ms1m-examples-choice-probface.jpg" width="600px">
+<img src="https://github.com/KaenChan/ProbFace/blob/main/log/ms1m-examples-choice-probface.jpg" width="600px">
 
 
 ## <img src="https://image.flaticon.com/icons/svg/48/48541.svg" width="25"/> Pre-trained Model
 
 #### ResFace64
-Base Mode: [Baidu Drive](https://pan.baidu.com/s/1ACjDBxA0tWFXs70J4dDv2A) v800, [Google Drive]()  
-MLS Only: [Baidu Drive](https://pan.baidu.com/s/128A5r0q_NMvuQMUCs3WdCg) 72tt, [Google Drive]()  
-MLS+L1+Triplet: [Baidu Drive](https://pan.baidu.com/s/1B4EtWymXe-E2WT7f7YHifA) sx8a, [Google Drive]()  
-ProbFace: [Baidu Drive](https://pan.baidu.com/s/134XMGLIMd3iKx_9wRUH_Rg) pr0m, [Google Drive]()  
+| Method | Download2 | Download2 |
+| ------ |--- | ----- |
+|Base Mode| [Baidu Drive](https://pan.baidu.com/s/1ACjDBxA0tWFXs70J4dDv2A) PW:v800| [Google Drive]TODO  |
+|MLS Only| [Baidu Drive](https://pan.baidu.com/s/128A5r0q_NMvuQMUCs3WdCg) PW:72tt| [Google Drive]TODO  |
+|MLS + L1 + Triplet| [Baidu Drive](https://pan.baidu.com/s/1B4EtWymXe-E2WT7f7YHifA) PW:sx8a| [Google Drive]TODO  |
+|ProbFace| [Baidu Drive](https://pan.baidu.com/s/134XMGLIMd3iKx_9wRUH_Rg) PW:pr0m| [Google Drive]TODO  |
 
 #### ResFace64(0.5)
-Base Mode: [Baidu Drive](https://pan.baidu.com/s/1XJr0ZMxOPczEh62t9rg6qg) zrkl, [Google Drive]()  
-MLS Only: [Baidu Drive](https://pan.baidu.com/s/1l4gD64yN3h0WYtqHap-KJw) et0e, [Google Drive]()  
-MLS+L1+Triplet: [Baidu Drive](https://pan.baidu.com/s/1GX4oQOgmoWovqm2N-JXzCQ) glmf, [Google Drive]()  
-ProbFace: [Baidu Drive](https://pan.baidu.com/s/1r10dVUpgrr3pifvd1LYB-g) o4tn, [Google Drive]()  
+| Method | Download2 | Download2 |
+| ------ |--- | ----- |
+|Base Mode| [Baidu Drive](https://pan.baidu.com/s/1XJr0ZMxOPczEh62t9rg6qg) PW:zrkl| [Google Drive]TODO  |
+|MLS Only| [Baidu Drive](https://pan.baidu.com/s/1l4gD64yN3h0WYtqHap-KJw) PW:et0e| [Google Drive]TODO  |
+|MLS + L1 + Triplet| [Baidu Drive](https://pan.baidu.com/s/1GX4oQOgmoWovqm2N-JXzCQ) PW:glmf| [Google Drive]TODO |  
+|ProbFace | [Baidu Drive](https://pan.baidu.com/s/1r10dVUpgrr3pifvd1LYB-g) PW:o4tn| [Google Drive]TODO  |
 
 #### Test Results: 
-| Method | LFW | IJB-A (FAR=0.1%) |
-| ------ |--- | ----- |
-| Baseline |  |  |
-| PFE |  |  |
-| Baseline |  |  |
-| PFE | |  |
-
+| Method | LFW   | CFP-FF | CALFW | AgeDB30| CPLFW | CFP-FP | Vgg2FP | Avg |
+| ------ | ------   | ------ |--- | ---| --- | --- | --- | --- |
+|Base Mode| 99.80 | 99.80 | 95.93 | 97.93 | 92.53 | 98.04 | 94.92 | 96.99|
+|MLS Only| 99.80 | 99.76 | 95.87 | 97.35 | 93.01 | 98.29 | 95.26 | 97.05 |
+|MLS + L1 + Triplet| 99.85 | 99.83 | 96.05 | 97.93 | 93.17 | 98.39 | 95.36 | 97.22 |
+|ProbFace | 99.85 | 99.80 | 96.02 | 97.90 | 93.53 | 98.41 | 95.34 | 97.26 |
 
 #### Acknowledgement
 

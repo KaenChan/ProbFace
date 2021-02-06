@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48ea624b-d54b-444f-8e0f-a5b5f3399040" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation/eval_lfw_openset.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation/eval_lfw_openset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation/openset_lfw/openset_lfw.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation/openset_lfw/openset_lfw.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation/verification.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation/verification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation/verification_risk.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation/verification_risk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/uncertainty_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/uncertainty_module.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_train.bat" beforeDir="false" afterPath="$PROJECT_DIR$/run_train.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/freeze.py" beforeDir="false" afterPath="$PROJECT_DIR$/freeze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_eval.bat" beforeDir="false" afterPath="$PROJECT_DIR$/run_eval.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,5 +65,9 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="771" y="298" key="FileChooserDialogImpl/62.0.1858.1080@62.0.1858.1080" timestamp="1610980536367" />
+    <state x="583" y="276" key="Vcs.Push.Dialog.v2" timestamp="1612446399643">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="583" y="276" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1612446399643" />
   </component>
 </project>
