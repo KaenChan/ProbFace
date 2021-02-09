@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48ea624b-d54b-444f-8e0f-a5b5f3399040" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/proto/WDRef/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/proto/WDRef/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,9 +62,9 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="771" y="298" key="FileChooserDialogImpl/62.0.1858.1080@62.0.1858.1080" timestamp="1610980536367" />
-    <state x="583" y="276" key="Vcs.Push.Dialog.v2" timestamp="1612581072856">
+    <state x="583" y="276" key="Vcs.Push.Dialog.v2" timestamp="1612581821607">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="583" y="276" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1612581072856" />
+    <state x="583" y="276" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1612581821607" />
   </component>
 </project>

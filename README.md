@@ -1,4 +1,4 @@
-# ProbFace
+# ProbFace, [arxiv](https://arxiv.org/abs/2101.11986)
 
 
 This is a demo code of training and testing [ProbFace] using Tensorflow.
@@ -102,3 +102,17 @@ Download the MS-Celeb-1M dataset from [insightface](https://github.com/deepinsig
 #### Acknowledgement
 
 This repo is inspired by [Probabilistic-Face-Embeddings](https://github.com/seasonSH/Probabilistic-Face-Embeddings)
+
+
+#### Reference
+If you find this repo useful, please consider citing:
+```
+@misc{chen2021reliable,
+    title={Reliable Probabilistic Face Embeddings in the Wild},
+    author={Kai Chen and Qi Lv and Taihe Yi and Zhengming Yi},
+    year={2021},
+    eprint={2102.04075},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+```
