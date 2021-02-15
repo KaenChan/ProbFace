@@ -1,4 +1,4 @@
-# ProbFace, [arxiv](https://arxiv.org/abs/2101.11986)
+# ProbFace, [arxiv](https://arxiv.org/abs/2102.04075)
 
 
 This is a demo code of training and testing [ProbFace] using Tensorflow.
