@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="48ea624b-d54b-444f-8e0f-a5b5f3399040" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configfig/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +58,17 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="607" y="348" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615429647460">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="607" y="348" key="#com.intellij.fileTypes.FileTypeChooser/62.0.1858.1080@62.0.1858.1080" timestamp="1615429647460" />
     <state x="771" y="298" key="FileChooserDialogImpl" timestamp="1610980536367">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="771" y="298" key="FileChooserDialogImpl/62.0.1858.1080@62.0.1858.1080" timestamp="1610980536367" />
-    <state x="583" y="276" key="Vcs.Push.Dialog.v2" timestamp="1613373546991">
+    <state x="583" y="276" key="Vcs.Push.Dialog.v2" timestamp="1615428896236">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="583" y="276" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1613373546991" />
+    <state x="583" y="276" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1615428896236" />
   </component>
 </project>

@@ -114,6 +114,10 @@ class Network:
                 self.sigma_sq = tf.identity(tf.exp(log_sigma_sq), name='sigma_sq')
                 sigma_sq = self.sigma_sq
 
+                if for_freeze:
+                    res = tf.concat(values=(self.mu, self.sigma_sq), axis=1, name='embeddings_with_sigma')
+                    return
+
                 # Build all losses
                 loss_list = []
                 self.watch_list = {}
