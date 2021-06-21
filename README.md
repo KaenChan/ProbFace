@@ -1,8 +1,8 @@
-# ProbFace, [arxiv](https://arxiv.org/abs/2102.04075)
+# ProbFace
 
 
 This is a demo code of training and testing [ProbFace] using Tensorflow.
-ProbFace is a reliable Probabilistic Face Embeddging (PFE) method.
+ProbFace is a fast and reliable Probabilistic Face Embeddging (PFE) method.
 The representation of each face will be an Guassian distribution parametrized by (mu, sigma), where mu is the original embedding and sigma is the learned uncertainty. Experiments show that ProbFace could
 + improve the robustness of PFE.
 + simplify the calculation of the multal likelihood score (MLS).
@@ -102,17 +102,3 @@ Download the MS-Celeb-1M dataset from [insightface](https://github.com/deepinsig
 #### Acknowledgement
 
 This repo is inspired by [Probabilistic-Face-Embeddings](https://github.com/seasonSH/Probabilistic-Face-Embeddings)
-
-
-#### Reference
-If you find this repo useful, please consider citing:
-```
-@misc{chen2021reliable,
-    title={Reliable Probabilistic Face Embeddings in the Wild},
-    author={Kai Chen and Qi Lv and Taihe Yi and Zhengming Yi},
-    year={2021},
-    eprint={2102.04075},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
-}
-```
