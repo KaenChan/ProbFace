@@ -9,14 +9,14 @@ The representation of each face will be an Guassian distribution parametrized by
 + improve the recognition performance on the risk-controlled scenarios.
 
 
-## <img src="https://image.flaticon.com/icons/svg/1/1383.svg" width="25"/> Usage
+## Usage
 
 ### Preprocessing
 
 Download the MS-Celeb-1M dataset from [insightface](https://github.com/deepinsight/insightface/wiki/Dataset-Zoo) or [face.evoLVe.PyTorch](https://github.com/ZhaoJ9014/face.evoLVe.PyTorch#Data-Zoo) and decode it using [this code](https://github.com/deepinsight/insightface/blob/master/recognition/data/rec2image.py)
 
 ### Training
-1. Download the base model [ResFace64](https://drive.baidu.com/open?id=1MiC_qCj5GFidWLtON9ekClOCJu6dPHT4) and unzip the files under ```log/resface64```.
+1. Download the base model ResFace64 from [Baidu Drive](https://pan.baidu.com/s/1ACjDBxA0tWFXs70J4dDv2A) PW:v800 and unzip the files under ```log/resface64```.
 
 2. Modify the configuration files under ```configfig/``` folder.
 
@@ -73,7 +73,7 @@ Download the MS-Celeb-1M dataset from [insightface](https://github.com/deepinsig
 <img src="https://github.com/KaenChan/ProbFace/blob/main/log/ms1m-examples-choice-probface.jpg" width="800px">
 
 
-## <img src="https://image.flaticon.com/icons/svg/48/48541.svg" width="25"/> Pre-trained Model
+## Pre-trained Model
 
 #### ResFace64
 | Method | Download2 | Download2 |
