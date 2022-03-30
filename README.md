@@ -102,3 +102,16 @@ Download the MS-Celeb-1M dataset from [insightface](https://github.com/deepinsig
 #### Acknowledgement
 
 This repo is inspired by [Probabilistic-Face-Embeddings](https://github.com/seasonSH/Probabilistic-Face-Embeddings)
+
+#### Reference
+If you find this repo useful, please consider citing:
+```
+@article{chen2022fast,
+  title={Fast and reliable probabilistic face embeddings based on constrained data uncertainty estimation},
+  author={Chen, Kai and Yi, Taihe and Lv, Qi},
+  journal={Image and Vision Computing},
+  pages={104429},
+  year={2022},
+  publisher={Elsevier}
+}
+```
